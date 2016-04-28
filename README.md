@@ -1,68 +1,18 @@
 sensu-demo Cookbook
 ===================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook creates a sensu server with a single check on itself. It also configures uchiwa as a front end. 
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+Install [ChefDK](https://downloads.chef.io/chef-dk/)
 
-e.g.
-#### packages
-- `toaster` - sensu-demo needs toaster to brown your bagel.
+Use [KitchenCI](http://kitchen.ci/) and ```kitchen create && kitchen converge``` to start the vm for testing.
 
-Attributes
-----------
-TODO: List your cookbook attributes here.
+** if you run a kitchen init - it will ask to remove the .kitchen.yml file. don't do that. 
 
-e.g.
-#### sensu-demo::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['sensu-demo']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
-
-Usage
------
-#### sensu-demo::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `sensu-demo` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[sensu-demo]"
-  ]
-}
-```
-
-Contributing
+Running
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
+Once the vm is running you can ssh with ```kitchen login``` or goto ```localhost:3000``` in a browser.
 
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+The default login is admin/pass123
 
-License and Authors
--------------------
-Authors: TODO: List authors
